@@ -1,0 +1,211 @@
+This browser version is no longer supported. Please upgrade to a supported browser.
+1 of 4,095
+Fwd: Code Files
+Inbox
+
+Shruti S <shruti.sm2020@gmail.com>
+Attachments
+9:45 PM (6 minutes ago)
+to me
+
+https://drive.google.com/file/d/1Lv_sJKyXgoPxEsBu-YTQ4mrNw7BrCrPM/view?usp=drive_link
+ 5 Attachments
+  •  Scanned by Gmail
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura - French Indian Capsule Wardrobe</title>
+  <meta name="description" content="Discover your perfect blend of French minimalism and Indian elegance with our AI-powered capsule wardrobe service.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="app-header glass">
+    <div class="logo">
+      <span class="logo-text">Aura.</span>
+      <span class="logo-desc">Studio</span>
+    </div>
+    <nav>
+      <button class="nav-btn" onclick="app.showPage('home')">Home</button>
+      <button class="nav-btn" onclick="app.showPage('onboarding')">Build your wardrobe</button>
+      <button class="nav-btn primary" onclick="app.showPage('quiz')">Find your style</button>
+    </nav>
+  </header>
+
+  <main id="app-container">
+    
+    <!-- Hero / Home Page -->
+    <section id="page-home" class="page active fade-in">
+      <div class="home-background-layer"></div>
+      <div class="hero-content glass-panel" style="padding: 3rem; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); border-radius: 20px;">
+        <h1 class="hero-title">Elevate Your Everyday <br> <em>Seamlessly.</em></h1>
+        <p class="hero-subtitle" style="color: #2C363F; font-weight: 500;">A curated capsule wardrobe blending precise French minimalism with vibrant Indian elegance.</p>
+        <button class="btn btn-large glass-hover" onclick="app.showPage('onboarding')">Start Your Style Journey <span class="arrow">→</span></button>
+      </div>
+      <div class="hero-graphics">
+        <div class="abstract-shape shape-1"></div>
+        <div class="abstract-shape shape-2"></div>
+        <div class="abstract-shape shape-3"></div>
+      </div>
+    </section>
+
+    <!-- Quiz Page -->
+    <section id="page-quiz" class="page">
+      <div class="quiz-container glass-panel">
+        <div class="progress-bar">
+          <div class="progress-fill" id="quiz-progress"></div>
+        </div>
+        <h2 id="quiz-question">Which silhouette appeals to you the most?</h2>
+        <div class="quiz-options" id="quiz-options">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Onboarding Page -->
+    <section id="page-onboarding" class="page">
+      <div class="onboarding-background-layer"></div>
+      <div class="onboarding-container glass-panel">
+        <div class="tabs">
+          <div class="tab active" data-tab="1" onclick="app.nextOnboarding(1)">Wardrobe</div>
+          <div class="tab" data-tab="2" onclick="app.nextOnboarding(2)">Profile</div>
+          <div class="tab" data-tab="3" onclick="app.nextOnboarding(3)">Blend & Budget</div>
+        </div>
+        
+        <div class="tab-content active" id="tab-1">
+          <h2>Select existing pieces you own</h2>
+          <div class="wardrobe-picker">
+            <label class="item-card"><input type="checkbox" value="kurtas"> <div class="card-ui">Indian Kurtas</div></label>
+            <label class="item-card"><input type="checkbox" value="salwar"> <div class="card-ui">Salwar Pants</div></label>
+            <label class="item-card"><input type="checkbox" value="saree"> <div class="card-ui">Sarees</div></label>
+            <label class="item-card"><input type="checkbox" value="dupatta"> <div class="card-ui">Dupattas</div></label>
+            <label class="item-card"><input type="checkbox" value="jeans"> <div class="card-ui">Classic Jeans</div></label>
+            <label class="item-card"><input type="checkbox" value="shirt"> <div class="card-ui">Crisp White/Black Shirts</div></label>
+            <label class="item-card"><input type="checkbox" value="trench"> <div class="card-ui">Trench Coat</div></label>
+            <label class="item-card"><input type="checkbox" value="blazer"> <div class="card-ui">Tailored Blazer</div></label>
+            <label class="item-card"><input type="checkbox" value="breton"> <div class="card-ui">Breton Stripe Top</div></label>
+            <label class="item-card"><input type="checkbox" value="trousers"> <div class="card-ui">Wide-leg Trousers</div></label>
+          </div>
+          <div class="form-group mt-20">
+            <label>Other existing pieces you own</label>
+            <input type="text" id="other-clothes" class="glass-input" placeholder="e.g. Vintage silk scarf, leather jacket...">
+          </div>
+          <button class="btn btn-next" onclick="app.nextOnboarding(2)">Next <span class="arrow">→</span></button>
+        </div>
+
+        <div class="tab-content" id="tab-2">
+          <h2>Body Type & Colors</h2>
+          <div class="form-group">
+            <label>Body Type</label>
+            <select id="body-type" class="glass-input">
+              <option value="pear">Pear Shape</option>
+              <option value="rectangle">Rectangle</option>
+              <option value="hourglass">Hourglass</option>
+              <option value="apple">Apple</option>
+              <option value="inverted-triangle">Inverted Triangle</option>
+              <option value="athletic">Athletic</option>
+              <option value="petite">Petite</option>
+              <option value="tall">Tall</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Color Palette</label>
+            <div class="color-picker" style="flex-wrap: wrap; gap: 0.75rem;">
+              <div class="color-swatch white" title="Crisp White"></div>
+              <div class="color-swatch cream" title="Cream"></div>
+              <div class="color-swatch beige selected" title="Beige"></div>
+              <div class="color-swatch blush" title="Blush Pink"></div>
+              <div class="color-swatch lavender" title="Lavender"></div>
+              <div class="color-swatch light-blue" title="Light Blue"></div>
+              <div class="color-swatch mint" title="Mint Green"></div>
+              <div class="color-swatch teal" title="Teal"></div>
+              <div class="color-swatch bright-yellow" title="Bright Yellow"></div>
+              <div class="color-swatch bright-red" title="Bright Red"></div>
+              <div class="color-swatch terracotta" title="Terracotta / Rust"></div>
+              <div class="color-swatch maroon" title="Deep Maroon"></div>
+              <div class="color-swatch olive" title="Olive Green"></div>
+              <div class="color-swatch brown" title="Earthy Brown"></div>
+              <div class="color-swatch navy selected" title="Navy"></div>
+              <div class="color-swatch charcoal" title="Charcoal"></div>
+              <div class="color-swatch black selected" title="Black"></div>
+            </div>
+          </div>
+          <p class="hint">We've pre-selected beige, navy, and black based on typical capsules. Tap to select/deselect your favorites.</p>
+          <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="app.nextOnboarding(1)">Back</button>
+            <button class="btn btn-next" onclick="app.nextOnboarding(3)">Next <span class="arrow">→</span></button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-3">
+          <h2>The Perfect Blend</h2>
+          <label>Budget for new purchases (₹)</label>
+          <input type="number" id="budget" class="glass-input" value="8000" step="500">
+          
+          <label class="mt-20">French vs Indian Style Blend</label>
+          <div class="slider-container">
+            <span class="slider-label">French</span>
+            <input type="range" id="style-blend" min="0" max="100" value="70" class="premium-slider">
+            <span class="slider-label">Indian</span>
+          </div>
+          <div class="blend-display">
+            <span id="blend-val-french">70%</span> Minimalist French / <span id="blend-val-indian">30%</span> Vibrant Indian
+          </div>
+
+          <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="app.nextOnboarding(2)">Back</button>
+            <button class="btn btn-primary cta-glow" onclick="app.generateCapsule()">Generate Capsule <span class="magic-wand">✨</span></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Dashboard / Results -->
+    <section id="page-dashboard" class="page">
+      <div class="dashboard-header align-center mb-40">
+        <h2>Your Custom Capsule</h2>
+        <p class="tagline">A curated mix of your loved items & strategic new pieces.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- AI Gaps & Existing -->
+        <div class="dash-card glass-panel gap-analysis">
+          <h3>Wardrobe Analysis</h3>
+          <div class="analysis-row">
+            <span class="badge exist">Existing</span>
+            <span id="analysis-existing"></span>
+          </div>
+          <div class="analysis-row mt-10">
+            <span class="badge gap">Identified Gaps</span>
+            <ul id="analysis-gaps">
+            </ul>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="dash-card glass-panel recommended-items">
+          <h3>Smart Additions <span class="budget-badge" id="budget-badge">Under ₹8,000</span></h3>
+          <div class="shopping-list" id="shopping-list">
+          </div>
+        </div>
+      </div>
+
+      <!-- Outfits Carousel -->
+      <div class="outfits-section mt-40 glass-panel">
+        <h3>Generated Outfits</h3>
+        <div class="outfits-grid" id="outfits-grid">
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>
