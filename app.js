@@ -347,5 +347,3 @@ const app = {
 document.addEventListener('DOMContentLoaded', () => {
   app.init();
 });
-app.js
-Displaying app.js.
